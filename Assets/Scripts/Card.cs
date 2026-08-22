@@ -15,7 +15,7 @@ public class Card : MonoBehaviour
     public GameObject cardGary;
     public Image cardMask;
     public float cdTime = 2;
-    public float cdTimer = 0;
+    private float cdTimer = 0;
     private void Update()
     {
         switch (cardState)
@@ -55,7 +55,6 @@ public class Card : MonoBehaviour
     void TransitionToWaitingSun()
     {
         cardState = CardState.WaitingSun;
-        Debug.Log("×ª»»ÖÁµÈ´ý×´Ì¬");
 
         cardLight.SetActive(false);
         cardGary.SetActive(true);
